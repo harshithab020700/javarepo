@@ -51,7 +51,10 @@ pipeline {
             steps {
                 sh """
                     echo "Restarting Tomcat..."
-                    ssh -o StrictHostKeyChecking=no ${TOMCAT_USER}@${TOMCAT_HOST} 'sudo systemctl restart tomcat'
+                    ssh -o StrictHostKeyChecking=no ubuntu@98.81.60.180 \
+    /home/ubuntu/apache-tomcat-9.0.109/bin/shutdown.sh && \
+    /home/ubuntu/apache-tomcat-9.0.109/bin/startup.sh
+
                 """
             }
         }
