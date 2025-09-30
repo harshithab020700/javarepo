@@ -43,7 +43,6 @@
     </build>
 </project>
 
-																																																																					<goals>
 																																																																													<goal>prepare-agent</goal>
 																																																																																			</goals>
 																																																																																								</execution>
